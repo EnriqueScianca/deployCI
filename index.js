@@ -3,15 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var app = express();
 var PORT = 3000;
-var User = /** @class */ (function () {
-    function User(name) {
-        this.name = name;
-    }
-    User.prototype.getName = function () {
-        console.log(this.name);
-    };
-    return User;
-}());
+console.log(process.env.FULL_NAME);
 app.get("/hola", function (req, res) {
     res.json({
         message: "Hola desde el servidor",
